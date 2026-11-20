@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Académie Dropshipping & E-commerce</title>
+<style>
+:root{--bg:#0e1411;--s:#17211b;--t:#eef3ef;--m:#9bb0a3;--a:#3fbf94;--l:#27352d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:16px/1.6 system-ui,sans-serif}
+.w{max-width:1000px;margin:auto;padding:0 18px}nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:10px;flex-wrap:wrap}
+nav b{font-size:1.1rem}nav a,nav button{margin-left:8px}
+button,.b{background:var(--a);color:#06231a;border:0;border-radius:8px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;display:inline-block}
+.g{background:none;color:var(--t);border:1px solid var(--l)}
+.hero{padding:56px 0 40px}.hero h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:0 0 14px}.hero p{color:var(--m);max-width:56ch}
+h2{margin:48px 0 16px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.c{background:var(--s);border:1px solid var(--l);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px}.c p{color:var(--m);margin:0;flex:1}
+.stat{font-size:2rem;font-weight:700;color:var(--a)}
+dialog{background:var(--s);color:var(--t);border:1px solid var(--l);border-radius:14px;width:min(380px,92vw)}
+input{width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid var(--l);background:var(--bg);color:var(--t);font:inherit}
+video{width:100%;border-radius:10px;background:#000;max-height:60vh}
+#lessons button{display:block;width:100%;text-align:left;margin:4px 0}footer{color:var(--m);text-align:center;padding:40px 0}
+
+.a{fill:var(--a)}.sf{fill:var(--s)}.ln{fill:var(--l)}.mu{fill:var(--m)}.st{stroke:var(--l);fill:none}.ac{stroke:var(--a);fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:40px 0 20px}
+.hero svg{width:100%;height:auto;filter:drop-shadow(0 20px 40px rgba(63,191,148,.15))}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.tag{display:inline-block;border:1px solid var(--l);color:var(--a);border-radius:99px;padding:3px 12px;font-size:.8rem;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;background:linear-gradient(135deg,var(--s),#102019);border:1px solid var(--l);border-radius:16px;padding:22px;margin:30px 0}
+.stats div{text-align:center}.stats .stat{display:block;font-size:2.2rem}.stats small{color:var(--m)}
+.pj{background:var(--s);border:1px solid var(--l);border-radius:14px;overflow:hidden;transition:transform .2s}.pj:hover{transform:translateY(-4px)}
+.pj svg{display:block;width:100%;height:auto;background:#0b110e}.pj div{padding:14px 16px}.pj h3{margin:0 0 4px}.pj p{margin:0;color:var(--m);font-size:.9rem}
+.pj em{display:inline-block;margin-top:8px;font-style:normal;color:var(--a);font-size:.85rem;font-weight:600}
+.ft{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}.ft div{padding:4px 0}.ft svg{width:42px;height:42px;margin-bottom:6px}.ft h3{margin:0 0 4px;font-size:1.05rem}.ft p{margin:0;color:var(--m);font-size:.92rem}
+.q{background:var(--s);border-left:3px solid var(--a);border-radius:10px;padding:16px}.q p{margin:0 0 8px;font-style:italic}.q small{color:var(--m)}
+.cta{text-align:center;background:linear-gradient(135deg,#143a2c,var(--s));border:1px solid var(--l);border-radius:16px;padding:36px 18px;margin:48px 0 0}
+#pm button{display:block;width:100%;margin:8px 0}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes dr{to{stroke-dashoffset:0}}
+.hero svg{animation:fl 6s ease-in-out infinite}.draw{stroke-dasharray:300;stroke-dashoffset:300;animation:dr 2.2s .6s forwards ease-out}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+.trust{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:10px 0 0}
+.trust div{display:flex;gap:10px;align-items:center;background:var(--s);border:1px solid var(--l);border-radius:12px;padding:12px 14px}
+.trust i{font-style:normal;font-size:1.5rem}.trust b{display:block;font-size:.95rem}.trust small{color:var(--m)}
+details{background:var(--s);border:1px solid var(--l);border-radius:12px;padding:14px 16px;margin:10px 0}summary{cursor:pointer;font-weight:600}details p{color:var(--m);margin:8px 0 0}
+.stats .stat{text-shadow:0 0 24px rgba(63,191,148,.35)}
+@media(prefers-reduced-motion:reduce){.hero svg,.draw{animation:none}.draw{stroke-dashoffset:0}}
+</style></head><body><div class="w">
+<nav><b>🎓 Académie E-commerce</b><div id="nav"></div></nav>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="m1" viewBox="0 0 320 200"><rect width="320" height="200" class="sf"/><rect width="320" height="22" class="ln"/><circle cx="12" cy="11" r="4" class="a"/><circle cx="26" cy="11" r="4" class="mu"/><rect x="20" y="34" width="120" height="10" rx="5" class="mu"/><rect x="20" y="50" width="80" height="7" rx="3" class="ln"/>
+<g class="ln"><rect x="20" y="76" width="85" height="52" rx="6"/><rect x="117" y="76" width="85" height="52" rx="6"/><rect x="214" y="76" width="85" height="52" rx="6"/><rect x="20" y="138" width="85" height="52" rx="6"/><rect x="117" y="138" width="85" height="52" rx="6"/><rect x="214" y="138" width="85" height="52" rx="6"/></g>
+<g class="a"><circle cx="62" cy="102" r="11"/><circle cx="159" cy="102" r="11" opacity=".6"/><circle cx="256" cy="102" r="11" opacity=".8"/></g></symbol>
+<symbol id="m2" viewBox="0 0 320 200"><rect width="320" height="200" class="sf"/><rect width="320" height="22" class="ln"/><circle cx="12" cy="11" r="4" class="a"/><circle cx="26" cy="11" r="4" class="mu"/>
+<rect x="20" y="38" width="130" height="144" rx="10" class="ln"/><circle cx="85" cy="104" r="32" class="a" opacity=".8"/><rect x="172" y="44" width="120" height="12" rx="6" class="mu"/><rect x="172" y="66" width="90" height="8" rx="4" class="ln"/><rect x="172" y="82" width="110" height="8" rx="4" class="ln"/><rect x="172" y="112" width="60" height="16" rx="4" class="a"/><rect x="172" y="150" width="120" height="32" rx="16" class="a"/></symbol>
+<symbol id="m3" viewBox="0 0 320 200"><rect width="320" height="200" class="sf"/><rect width="320" height="22" class="ln"/><circle cx="12" cy="11" r="4" class="a"/>
+<g class="ln"><rect x="20" y="36" width="88" height="40" rx="6"/><rect x="116" y="36" width="88" height="40" rx="6"/><rect x="212" y="36" width="88" height="40" rx="6"/></g><g class="a"><rect x="28" y="46" width="40" height="8" rx="4"/><rect x="124" y="46" width="52" height="8" rx="4"/><rect x="220" y="46" width="30" height="8" rx="4"/></g>
+<g class="a"><rect x="28" y="150" width="22" height="30" opacity=".5"/><rect x="62" y="136" width="22" height="44" opacity=".6"/><rect x="96" y="124" width="22" height="56" opacity=".7"/><rect x="130" y="110" width="22" height="70" opacity=".8"/></g><polyline points="28,140 80,118 140,100 200,92 300,56" class="ac"/></symbol>
+</defs></svg>
+<section class="hero"><div><span class="tag">Formation vidéo e-commerce</span><h1>Lancez votre boutique en ligne et vendez avec le dropshipping.</h1>
+<p>De la création de la boutique à la publicité, apprenez chaque étape avec des vidéos claires. Paiement sécurisé, accès immédiat après achat.</p>
+<a class="b" href="#formations">Voir les formations</a></div>
+<svg viewBox="0 0 460 360" aria-hidden="true"><circle cx="230" cy="180" r="160" class="ln" opacity=".35"/>
+<g transform="translate(40 30)"><rect width="300" height="210" rx="14" class="sf"/><rect width="300" height="28" rx="14" class="ln"/><circle cx="16" cy="14" r="4.5" class="a"/><circle cx="30" cy="14" r="4.5" class="mu"/>
+<rect x="18" y="44" width="130" height="12" rx="6" class="mu"/><rect x="18" y="64" width="90" height="8" rx="4" class="ln"/>
+<g class="ln"><rect x="18" y="92" width="80" height="96" rx="8"/><rect x="110" y="92" width="80" height="96" rx="8"/><rect x="202" y="92" width="80" height="96" rx="8"/></g>
+<g class="a"><circle cx="58" cy="124" r="17"/><circle cx="150" cy="124" r="17" opacity=".6"/><circle cx="242" cy="124" r="17" opacity=".8"/></g>
+<g class="mu"><rect x="30" y="156" width="56" height="7" rx="3"/><rect x="122" y="156" width="56" height="7" rx="3"/><rect x="214" y="156" width="56" height="7" rx="3"/></g></g>
+<g transform="translate(220 190)"><rect width="200" height="130" rx="14" class="sf"/><rect width="200" height="130" rx="14" class="st"/><rect x="16" y="16" width="70" height="9" rx="4" class="mu"/><rect x="16" y="32" width="46" height="14" rx="4" class="a"/>
+<polyline points="16,110 56,88 96,98 140,60 184,30" class="ac draw"/></g>
+<circle cx="390" cy="70" r="34" class="a"/><path d="M376 60h8l5 20h18l4-14h-24" stroke="#06231a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="392" cy="88" r="3.5" fill="#06231a"/><circle cx="410" cy="88" r="3.5" fill="#06231a"/></svg></section>
+<div class="trust"><div><i>🔒</i><span><b>Paiement sécurisé</b><small>Par Jèko</small></span></div><div><i>📲</i><span><b>Mobile Money</b><small>Wave, Orange, MTN, Moov, Djamo</small></span></div><div><i>⚡</i><span><b>Accès immédiat</b><small>Vidéos débloquées après paiement</small></span></div><div><i>📱</i><span><b>Partout</b><small>Téléphone, tablette, ordinateur</small></span></div></div>
+<section id="portfolio"><!-- CHIFFRES FICTIFS DE DÉMO : remplacez par vos vrais chiffres avant la mise en ligne -->
+<div class="stats"><div><span class="stat" data-to="120" data-suf="+">120+</span><small>Boutiques lancées</small></div><div><span class="stat" data-to="850" data-suf="+">850+</span><small>Élèves formés</small></div><div><span class="stat" data-to="5" data-suf=" ans">5 ans</span><small>d’expérience</small></div><div><span class="stat" data-to="45" data-suf=" M FCFA">45 M FCFA</span><small>de chiffre d’affaires généré</small></div></div>
+<h2>Ce que vous allez apprendre</h2>
+<div class="ft">
+<div><svg viewBox="0 0 42 42"><rect width="42" height="42" rx="10" class="ln"/><path d="M11 15h20l-2 14H13zM16 15a5 5 0 0110 0" class="ac" style="stroke-width:2.5"/></svg><h3>Créer sa boutique</h3><p>Plateforme, design, paiement et livraison.</p></div>
+<div><svg viewBox="0 0 42 42"><rect width="42" height="42" rx="10" class="ln"/><circle cx="19" cy="19" r="8" class="ac" style="stroke-width:2.5"/><path d="M25 25l8 8" class="ac" style="stroke-width:2.5"/></svg><h3>Trouver des produits</h3><p>Critères, outils et analyse de la concurrence.</p></div>
+<div><svg viewBox="0 0 42 42"><rect width="42" height="42" rx="10" class="ln"/><circle cx="21" cy="21" r="11" class="ac" style="stroke-width:2.5"/><circle cx="21" cy="21" r="4" class="a"/></svg><h3>Cibler les bons marchés</h3><p>Pays, audience et clients idéaux.</p></div>
+<div><svg viewBox="0 0 42 42"><rect width="42" height="42" rx="10" class="ln"/><path d="M9 30l8-9 6 5 10-13" class="ac" style="stroke-width:2.5"/></svg><h3>Faire de la publicité</h3><p>Facebook, Instagram, TikTok, optimisation.</p></div></div>
+<h2>Témoignages</h2>
+<div class="grid"><div class="q"><p>« Ajoutez ici le témoignage d’un élève. »</p><small>— [Prénom], [Ville]</small></div><div class="q"><p>« Ajoutez ici un second témoignage. »</p><small>— [Prénom], [Ville]</small></div></div>
+<h2>Questions fréquentes</h2>
+<details><summary>Comment payer ?</summary><p>Choisissez Wave, Orange Money, MTN, Moov ou Djamo. Le paiement se fait sur la page sécurisée de Jèko.</p></details>
+<details><summary>Quand ai-je accès à la formation ?</summary><p>Dès la confirmation du paiement, les vidéos s’ouvrent automatiquement dans votre compte.</p></details>
+<details><summary>Sur quels appareils puis-je suivre les vidéos ?</summary><p>Sur téléphone, tablette ou ordinateur, à tout moment, depuis votre compte personnel.</p></details>
+<details><summary>Une question avant d’acheter ?</summary><p>Écrivez-nous : [votre numéro WhatsApp ou email].</p></details>
+<div class="cta"><h2 style="margin-top:0">Prêt à lancer votre boutique ?</h2><a class="b" href="#formations">Commencer la formation</a></div></section>
+<h2 id="formations">Formations</h2><div id="courses" class="grid"></div>
+<section id="view" style="display:none"><h2 id="vt"></h2><video id="vid" controls controlsList="nodownload" playsinline></video><div id="lessons"></div></section>
+<footer>© <span id="y"></span> — Tous droits réservés</footer></div>
+<dialog id="pay"><h3>Payer 15 000 FCFA avec</h3><div id="pm"><button class="g" data-m="wave">Wave</button><button class="g" data-m="orange">Orange Money</button><button class="g" data-m="mtn">MTN Mobile Money</button><button class="g" data-m="moov">Moov Money</button><button class="g" data-m="djamo">Djamo</button></div></dialog>
+<dialog id="dlg"><form method="dialog" id="f"><h3 id="dt">Connexion</h3><input id="n" placeholder="Nom" style="display:none"><input id="e" type="email" placeholder="Email" required><input id="p" type="password" placeholder="Mot de passe (8 car. min.)" required>
+<div id="er" style="color:#f2b8b5"></div><button>Valider</button> <button type="button" class="g" id="sw">Créer un compte</button></form></dialog>
+<script>
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const api=(u,b)=>fetch(u,{method:b?'POST':'GET',headers:{'Content-Type':'application/json'},body:b&&JSON.stringify(b)}).then(async r=>{const j=await r.json().catch(()=>({}));if(!r.ok)throw Error(j.error||'Erreur');return j});
+const fmt=c=>c.currency==='xof'?c.price.toLocaleString('fr-FR')+' FCFA':(c.price/100).toFixed(2)+' '+c.currency.toUpperCase();
+let me=null,reg=false,pend=0;$('#y').textContent=new Date().getFullYear();
+async function load(){me=(await api('/api/me')).user;
+ $('#nav').innerHTML=me?`${me.role==='admin'?'<a class="b g" href="/admin.html">Admin</a>':''}<button class="g" id="lo">Déconnexion</button>`:'<button id="li">Connexion</button>';
+ $('#lo')&&($('#lo').onclick=async()=>{await api('/api/logout',{});load()});$('#li')&&($('#li').onclick=()=>$('#dlg').showModal());
+ const cs=await api('/api/courses');$('#courses').innerHTML=cs.length?cs.map(c=>`<div class="c"><h3>${esc(c.title)}</h3><p>${esc(c.descr)}</p><small>${c.lessons} vidéo(s)</small>
+ ${c.owned?`<button data-o="${c.id}">▶ Accéder</button>`:`<button data-b="${c.id}">Acheter — ${fmt(c)}</button>`}</div>`).join(''):'<p>Bientôt disponible.</p>'}
+$('#courses').onclick=async e=>{const o=e.target.dataset.o,b=e.target.dataset.b;
+ if(b){if(!me)return $('#dlg').showModal();pend=+b;$('#pay').showModal()}
+ if(o){const d=await api('/api/courses/'+o);$('#vt').textContent=d.course.title;let g='',cu='';d.lessons.forEach(l=>{if(l.module!==cu){cu=l.module;g+=`<h3>${esc(cu)}</h3>`}g+=l.has?`<button class="g" data-l="${l.id}">▶ ${esc(l.title)}</button>`:`<button class="g" disabled style="opacity:.5">⏳ ${esc(l.title)} — bientôt</button>`});$('#lessons').innerHTML=g;$('#view').style.display='block';$('#view').scrollIntoView()}};
+$('#lessons').onclick=e=>{if(e.target.dataset.l){$('#vid').src='/video/'+e.target.dataset.l;$('#vid').play()}};
+$('#pm').onclick=async e=>{const m=e.target.dataset.m;if(!m)return;$('#pay').close();try{location=(await api('/api/checkout',{courseId:pend,method:m})).url;load()}catch(x){alert(x.message)}};
+$('#sw').onclick=()=>{reg=!reg;$('#n').style.display=reg?'block':'none';$('#dt').textContent=reg?'Créer un compte':'Connexion';$('#sw').textContent=reg?'J’ai déjà un compte':'Créer un compte'};
+$('#f').onsubmit=async e=>{e.preventDefault();try{await api(reg?'/api/register':'/api/login',{email:$('#e').value,name:$('#n').value,password:$('#p').value});$('#dlg').close();load()}catch(x){$('#er').textContent=x.message}};
+if(location.search.includes('paid=1'))alert('Merci ! Votre accès est activé dans quelques secondes.');load();
+</script><script>
+(function(){var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function fm(n){return Math.round(n).toLocaleString('fr-FR')}
+function count(el){var to=+el.dataset.to,suf=el.dataset.suf||'';if(rm)return;var t0=performance.now();(function f(t){var p=Math.min((t-t0)/1800,1),e=1-Math.pow(1-p,3);el.textContent=fm(to*e)+suf;if(p<1)requestAnimationFrame(f)})(t0)}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);if(e.target.classList.contains('stats'))e.target.querySelectorAll('[data-to]').forEach(count);e.target.classList.add('in')})},{threshold:.2});
+document.querySelectorAll('.stats,.ft div,.q,.cta,.trust div,details,#portfolio h2').forEach(function(el){if(!rm)el.classList.add('rv');io.observe(el)});
+})();
+</script></body></html>

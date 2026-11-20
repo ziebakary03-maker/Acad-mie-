@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin</title>
+<style>body{font:16px system-ui;background:#0e1411;color:#eef3ef;max-width:760px;margin:auto;padding:18px}input,select,textarea{width:100%;padding:9px;margin:5px 0;border-radius:8px;border:1px solid #27352d;background:#17211b;color:#eef3ef;font:inherit}
+button{background:#3fbf94;border:0;border-radius:8px;padding:9px 14px;font-weight:600;cursor:pointer}.x{background:none;color:#f2b8b5;border:1px solid #27352d}.c{background:#17211b;border:1px solid #27352d;border-radius:12px;padding:14px;margin:14px 0}a{color:#3fbf94}</style></head><body>
+<h1>Back-office</h1><a href="/">← Voir le site</a>
+<div class="c"><h3>Nouvelle formation</h3><input id="t" placeholder="Titre"><textarea id="d" placeholder="Description"></textarea>
+<input id="pr" type="number" step="0.01" placeholder="Prix (ex. 15000 en FCFA)"><select id="cu"><option value="xof">FCFA</option><option value="eur">EUR</option><option value="usd">USD</option></select><button id="ac">Créer</button></div>
+<div class="c"><h3>Ajouter une vidéo</h3><select id="cs"></select><input id="mo" placeholder="Module (ex. 3. Recherche de produits)"><input id="lt" placeholder="Titre de la leçon"><input id="po" type="number" placeholder="Ordre (1, 2, 3…)"><input id="vf" type="file" accept="video/*"><button id="al">Téléverser</button><div id="m"></div></div>
+<div id="ls"></div>
+<script>
+const $=s=>document.querySelector(s),j=(u,m,b)=>fetch(u,{method:m,headers:{'Content-Type':'application/json'},body:b&&JSON.stringify(b)}).then(r=>r.json());
+async function load(){const cs=await(await fetch('/api/courses')).json();$('#cs').innerHTML=cs.map(c=>`<option value="${c.id}">${c.title}</option>`).join('');
+ $('#ls').innerHTML='';for(const c of cs){const d=await(await fetch('/api/courses/'+c.id)).json();
+ $('#ls').innerHTML+=`<div class="c"><b>${c.title}</b> <button class="x" onclick="del('courses',${c.id})">Supprimer la formation</button>`+d.lessons.map(l=>`<div><small>${l.module||''}</small> • ${l.title} ${l.has?'✔':`<input type=file accept=video/* style="width:auto" onchange="att(${l.id},this)">`} <button class="x" onclick="del('lessons',${l.id})">×</button></div>`).join('')+'</div>'}}
+async function att(id,i){if(!i.files[0])return;const fd=new FormData();fd.append('video',i.files[0]);await fetch('/api/admin/lessons/'+id+'/video',{method:'POST',body:fd});load()}
+async function del(k,id){if(confirm('Supprimer ?')){await j('/api/admin/'+k+'/'+id,'DELETE');load()}}
+$('#ac').onclick=async()=>{await j('/api/admin/courses','POST',{title:$('#t').value,descr:$('#d').value,price:$('#pr').value,currency:$('#cu').value});load()};
+$('#al').onclick=async()=>{const f=$('#vf').files[0];if(!f)return;$('#m').textContent='Téléversement…';const fd=new FormData();
+ fd.append('courseId',$('#cs').value);fd.append('title',$('#lt').value);fd.append('module',$('#mo').value);fd.append('pos',$('#po').value);fd.append('video',f);
+ const r=await fetch('/api/admin/lessons',{method:'POST',body:fd});$('#m').textContent=r.ok?'Vidéo ajoutée ✔':'Échec (êtes-vous connecté en admin ?)';load()};
+load();
+</script></body></html>
